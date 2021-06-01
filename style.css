@@ -1,0 +1,250 @@
+/*Fonts*/
+@font-face {
+    font-family: 'Aquire';
+    src: url(/fonts/AquireBold-8Ma60.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Fonts*/
+
+
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+    font-family: 'Arvo', serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.header{
+    height: 10vh;
+    width: 100%;
+    padding: 0 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+    white-space: nowrap;
+    z-index: 111;
+}
+
+.header .logo a{
+    font-size: 2.8em;
+    font-weight: 800;
+    background-image: none;
+    transition: all 0.5s ease;
+    background: white; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    font-family: 'Aquire', sans-serif;s
+
+}
+.header .logo a.active span{
+    background: red; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    transition: all 0.5s ease;
+}
+
+.header-links{
+    width: 60%;
+    display: flex;
+}
+.header-links .search-icon {
+    background-color: white;
+    height: 22px;
+    border-radius: 5px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+.header-links .search-icon .search{
+    padding: 2px;
+    outline: none;
+    border-radius: 5px;
+    height: 22px;
+    border: none;
+}
+
+.header-links .search-icon .fas{
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -15px;
+}
+
+.header-links h3{
+    font-weight: 500;
+    font-size: 1.15em;
+    margin-right: 10px;
+    color: white;
+}
+
+.header-links .other{
+    font-size: 1.1em;
+    font-weight: 500;
+    color: white;
+    margin-left: 50px;
+    display: flex;
+}
+
+.header-links .other li a{
+    margin: 0 1em;
+    color: white;
+    position: relative;
+}
+.header-links .other li a::before{
+    content:'';
+    width: 0;
+    height: 1.3px;
+    background-color: white;
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    transition: all 0.5s ease;
+}
+.header-links .other li a:hover::before{
+    width: 100%;
+}
+
+/* section 1 */
+.presentation{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-size: cover;
+    background-image: url('img/black-texture\(1\).jpg');
+    transition: all 1s ease;
+    
+}
+
+.presentation h1{
+    position: absolute;
+    color: white;
+    font-size: 3.5em;
+    font-weight: 500;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+.presentation h1.active{
+    transform: translateX(100%);
+    display: none;
+    transition: all 1s ease;
+}
+
+.nav-links{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw;
+    margin-bottom: 1em;
+}
+.nav-links .links{
+    display: flex;
+    font-size: 4.5em;
+    margin-bottom: auto;
+}
+
+.nav-links .links a{
+    color: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin: 0 1em;
+    transition: all 0.5s ease;
+}
+
+.nav-links .links a.active{
+    background-color: white;
+    -webkit-text-stroke: unset;
+    -webkit-text-fill-color: none;
+    transition: all .5s ease;
+}
+
+/* section 1 */
+
+/* section 2 */
+.reserver{
+    height: 70vh;
+    background: #FFFF; 
+    display: flex; 
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+
+}
+
+.reserver h2{
+    margin-top: 1em;
+    color: #141E30;
+    font-size: 4em;
+    position: relative;
+}
+
+.reserver a svg{
+    margin-top: 1em;
+    
+}
+
+.reserver a svg #avion{
+    transition: all 1.2s;
+}
+
+.reserver a svg:hover #avion{
+    transform: translateX(5em);
+    transition: all 1s ease-in-out;
+}
+
+footer{
+    height: 30vh;
+    background-color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer ul{
+    height: 15vh;
+    margin-left: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer ul li a{
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.5s ease;
+    
+}
+footer ul li a:hover{
+    transform: scale(1.5);
+    transition: all 0.4s ease;
+}
+
+footer ul .reseau{
+    display: flex;
+    position: absolute;
+    left: 16%;
+    top: 94.5%;
+}
+footer ul .reseau .fab{
+    margin: 0 10px;
+}
